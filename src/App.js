@@ -23,7 +23,7 @@ const [score, setScore]= React.useState(answerArr)
   
   React.useEffect(() => {
       
-    fetch()
+    fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple")
       .then(res => res.json())
       .then(data =>{ 
         
@@ -87,7 +87,7 @@ return (
    
       {intro && <Intro displayIntro={displayIntro} />}
       <div className="question-comp">
-      {!intro && error && <p>{error}</p>}
+      {!intro && error && <p className="error">{error}</p>}
        {!intro && !error && element}
       <div className="btn-format">
        {!intro && playButton}
