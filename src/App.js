@@ -30,7 +30,7 @@ const [score, setScore]= React.useState(answerArr)
           setQuestions(data.results)
           })
           .catch((error) => {
-            setError("Failed to fetch questions. Please try again.")
+            setError("Failed to fetch questions. Please try again later.")
           })    
   }, [])
   
