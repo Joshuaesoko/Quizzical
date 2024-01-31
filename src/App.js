@@ -9,6 +9,7 @@ export default function App() {
   const [isClicked, setisClicked] = React.useState(true)
   const [checkScore, setCheckScore]= React.useState(false)
   const [totalScore, setTotalScore] = React.useState(0)
+  const [error, setError] = React.useState(null)
   const answerArr= []
 const [score, setScore]= React.useState(answerArr)
 
@@ -22,14 +23,17 @@ const [score, setScore]= React.useState(answerArr)
   
   React.useEffect(() => {
       
-    fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple")
+    fetch()
       .then(res => res.json())
       .then(data =>{ 
         
           setQuestions(data.results)
           })
+          .catch((error) => {
+            setError("Failed to fetch questions. Please try again.")
+          })    
   }, [])
-  console.log(questions)
+  
     function displayIntro() {
     setIntro(false);
   }
@@ -83,7 +87,8 @@ return (
    
       {intro && <Intro displayIntro={displayIntro} />}
       <div className="question-comp">
-        {!intro && element}
+      {!intro && error && <p>{error}</p>}
+       {!intro && !error && element}
       <div className="btn-format">
        {!intro && playButton}
        </div>

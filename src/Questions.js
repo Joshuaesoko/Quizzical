@@ -51,12 +51,13 @@ export default function Questions(props){
   
    
     return (
-        <div className="question">
+       <div className="question">
         <h1>{decodedQuestion}</h1>
         <div className="options">
         {options}
         </div>
        <hr/>
         </div>
+    
     )
 }
