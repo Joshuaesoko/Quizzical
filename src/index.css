@@ -143,11 +143,27 @@ align-items: center;
     font-size: 30px;
     
   }
- 
+
   .intro>button{
     border: none;
     width: 250px;
     height: 80px;
+    font-size: 30px;
+  }
+  
+  .option-p{
+  font-size: 25px;
+  }
+
+  .question>h1{
+    font-size: 20px;
+  }
+
+  .btn{
+    font-size: 30px;
+  }
+  
+  .btn-div{
     font-size: 30px;
   }
 }
