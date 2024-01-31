@@ -25,11 +25,11 @@ const [score, setScore]= React.useState(answerArr)
     fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple")
       .then(res => res.json())
       .then(data =>{ 
-        console.log(data)
+        
           setQuestions(data.results)
           })
   }, [])
-  
+  console.log(questions)
     function displayIntro() {
     setIntro(false);
   }

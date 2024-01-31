@@ -4,6 +4,7 @@
 
 body{
  background: #F5F7FB;
+ max-width: none;
 }
 
 .intro{
@@ -130,4 +131,23 @@ margin-top: 20px;
 display: flex;
 flex-direction: column;
 align-items: center;
+}
+
+@media only screen and (max-width: 980px) {
+
+  .intro>h1{
+    font-size: 70px;
+    margin: 20px;
+  }
+  .intro>p{
+    font-size: 30px;
+    
+  }
+ 
+  .intro>button{
+    border: none;
+    width: 250px;
+    height: 80px;
+    font-size: 30px;
+  }
 }
