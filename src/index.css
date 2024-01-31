@@ -177,7 +177,11 @@ align-items: center;
   }
 
   hr{
-    
+    margin-top: 50px;
     border: 1px solid #DBDEF0;
+  }
+
+  .question{
+    margin-bottom: 50px;
   }
 }
