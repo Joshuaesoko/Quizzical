@@ -152,11 +152,11 @@ align-items: center;
   }
   
   .option-p{
-  font-size: 30px;
+  font-size: 28px;
   }
 
   .question>h1{
-    font-size: 30px;
+    font-size: 33px;
   }
 
   .btn{
@@ -165,5 +165,10 @@ align-items: center;
   
   .btn-div{
     font-size: 30px;
+  }
+
+  hr{
+    
+    border: 1px solid #DBDEF0;
   }
 }
